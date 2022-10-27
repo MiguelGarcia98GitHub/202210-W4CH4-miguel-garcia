@@ -12,7 +12,6 @@ export function CreateRobot() {
     });
 
     function submitForm(e: React.SyntheticEvent) {
-        console.log(formData);
         e.preventDefault();
         handleAdd(formData);
     }

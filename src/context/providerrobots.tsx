@@ -9,7 +9,6 @@ export function RobotsContextProvider({ children }: { children: JSX.Element }) {
     const handleDelete = (id: number) => {
         let newState = [...robots];
         newState = newState.filter((robot) => robot.id !== id);
-        console.log(newState);
         setRobots(newState);
     };
 
