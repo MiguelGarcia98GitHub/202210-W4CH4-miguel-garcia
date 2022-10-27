@@ -32,7 +32,7 @@ describe("Given CreateRobot Component", () => {
             const element = screen.getByText(/Speed/i);
             expect(element).toBeInTheDocument();
         });
-        test("Then it should have a function called submitForm", () => {
+        test("Then it should have a function called submitForm executed once when we click on the button", () => {
             const mockRobotData = {
                 id: Math.floor(Math.random() * 1000000),
                 name: "Terminator",
