@@ -4,10 +4,9 @@ import { RobotsContext } from "../context/contextrobots";
 
 export function RobotCard({ data }: { data: Robot }) {
     const { handleDelete } = useContext(RobotsContext);
-    console.log(handleDelete);
 
     return (
-        <div className="robot__card">
+        <div className="robot__card" id={data.id.toString()}>
             <div className="robot__name__container">
                 <span className="robot__name">{data.name}</span>
             </div>
