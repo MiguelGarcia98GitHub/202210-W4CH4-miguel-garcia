@@ -1,9 +1,8 @@
 import { Container } from "./components/Container";
 import { RobotCard } from "./components/RobotCard";
-import { RobotsContextProvider } from "./context/providerrobots";
-import { listOfRobots } from "./models/listOfRobots";
 import { useContext } from "react";
 import { RobotsContext } from "./context/contextrobots";
+import { CreateRobot } from "./components/CreateRobot";
 
 function App() {
     const { robots } = useContext(RobotsContext);
@@ -14,8 +13,11 @@ function App() {
 
     return (
         <div className="app">
+            <CreateRobot />
             <Container>
-                <>{renderAllRobotCards} </>
+                <>
+                    <>{renderAllRobotCards} </>
+                </>
             </Container>
         </div>
     );

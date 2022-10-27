@@ -1,4 +1,4 @@
-import { listOfRobots, Robot } from "../models/listOfRobots";
+import { listOfRobots } from "../models/listOfRobots";
 import { useState } from "react";
 import { RobotsContext } from "./contextrobots";
 
@@ -13,13 +13,23 @@ export function RobotsContextProvider({ children }: { children: JSX.Element }) {
         setRobots(newState);
     };
 
-    const handleAdd = ({ data }: { data: Robot }) => {
+    const handleAdd = ({
+        name,
+        imageURL,
+        speed,
+        resistance,
+    }: {
+        name: string;
+        imageURL: string;
+        speed: number;
+        resistance: number;
+    }) => {
         let newState = [...robots];
         const robotId = Math.floor(Math.random() * 1000000);
-        const robotName = data.name;
-        const robotImageURL = data.imageURL;
-        const robotSpeed = data.speed;
-        const robotResistance = data.resistance;
+        const robotName = name;
+        const robotImageURL = imageURL;
+        const robotSpeed = speed;
+        const robotResistance = resistance;
         const robotCreationDate = new Date().toLocaleDateString();
 
         const newRobot = {
