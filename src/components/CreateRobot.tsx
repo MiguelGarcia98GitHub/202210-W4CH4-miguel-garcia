@@ -18,7 +18,7 @@ export function CreateRobot() {
 
     return (
         <div>
-            <form>
+            <form onSubmit={submitForm}>
                 <label>
                     <input
                         type="text"
@@ -71,7 +71,7 @@ export function CreateRobot() {
                         }}
                     />
                 </label>
-                <button type="submit" onClick={submitForm}></button>
+                <button type="submit"></button>
             </form>
         </div>
     );
